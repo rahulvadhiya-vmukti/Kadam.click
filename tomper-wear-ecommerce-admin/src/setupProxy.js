@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://localhost:5000/', // Replace with the correct URL of your backend server
+      target: 'https://kadam.click/ser', // Replace with the correct URL of your backend server
       changeOrigin: true,
     })
   );

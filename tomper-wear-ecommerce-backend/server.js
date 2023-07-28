@@ -45,7 +45,7 @@ connectToDb();
 // });
 
 // using middlewares
-const allowedOrigins = ['https://localhost:3000', 'https://localhost:3001'];
+const allowedOrigins = ['http://191.96.31.55:3000','https://kadam.click','http://192.168.29.62:3000','https://kadam.click/admin','http://191.96.31.55:3001'];
 app.use(
   cors({
     origin: allowedOrigins,
@@ -90,8 +90,8 @@ const sslOptions = {
   cert: fs.readFileSync('./certificate.crt'), // Path to your certificate file
 };
 // starting server
-const server = https.createServer(sslOptions, app).listen(process.env.PORT || 5000, () => {
-  console.log('Server running with SSL');
+const server = app.listen(process.env.PORT || 5000, () => {
+  console.log('Server running without SSL');
 });
 
 // unhandled promise rejection

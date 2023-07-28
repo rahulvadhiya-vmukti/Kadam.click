@@ -110,7 +110,7 @@ const handlePaymentCompletion = async (req, res, next) => {
       }
       // Redirect to the URL with the postData as query parameter
       // res.json({ status: postData.txStatus });
-      res.redirect('https://localhost:3000/response?postData=' + JSON.stringify(postData));
+      res.redirect('https://kadam.click/response?postData=' + JSON.stringify(postData));
       // res.sendStatus(302);
       
     } catch (error) {
